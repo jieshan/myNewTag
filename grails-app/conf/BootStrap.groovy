@@ -53,17 +53,17 @@ class BootStrap {
                 .to(BaselineSubtractingUserVectorNormalizer.class);
         LenskitRecommenderEngineBuilder builder = LenskitRecommenderEngine.newBuilder();
         builder.addConfiguration(configCF);
-        /*for(int i=1; i<=100; i++){
+        for(int i=1; i<=100; i++){
             inputFile = new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\ratingsNewSrc"+i+".csv");
             EventDAO base = new SimpleFileRatingDAO(inputFile, delimiter);
             LenskitConfiguration dataConfig = new LenskitConfiguration();
             dataConfig.bind(EventDAO.class).to(base);
             builder.addConfiguration(dataConfig,ModelDisposition.EXCLUDED);
-        }*/
-        EventDAO base = new SimpleFileRatingDAO(inputFile, delimiter);
+        }
+        /*EventDAO base = new SimpleFileRatingDAO(inputFile, delimiter);
         LenskitConfiguration dataConfig = new LenskitConfiguration();
         dataConfig.bind(EventDAO.class).to(base);
-        builder.addConfiguration(dataConfig,ModelDisposition.EXCLUDED);
+        builder.addConfiguration(dataConfig,ModelDisposition.EXCLUDED);*/
         System.out.println("done setting up CF config")
         LenskitRecommenderEngine engine = builder.build();
         engine.write(new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\CFmodel.bin"));
@@ -97,15 +97,15 @@ class BootStrap {
         dataConfigTag.set(UserTagRatingFile.class)
                 //.to(new File("D:\\MAC\\CSHonors\\data\\user-tagratings.csv"));
                   .to(new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\userTagRatingsSrc.csv"));
-        dataConfigTag.bind(EventDAO.class)
+        /*dataConfigTag.bind(EventDAO.class)
                 .to(MOOCRatingDAO.class);
         dataConfigTag.set(RatingFile.class)
         //.to(new File("D:\\MAC\\CSHonors\\data\\ratings0.csv"));
-                .to( new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\ratingsNewSrc.csv"));
+                .to( new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\ratingsNewSrc.csv"));*/
         builder = LenskitRecommenderEngine.newBuilder();
         builder.addConfiguration(configTag);
         builder.addConfiguration(dataConfigTag,ModelDisposition.EXCLUDED);
-        /*for(int i=1; i<=100; i++){
+        for(int i=1; i<=100; i++){
             dataConfigTag = new LenskitConfiguration();
             dataConfigTag.bind(EventDAO.class)
                     .to(MOOCRatingDAO.class);
@@ -113,7 +113,7 @@ class BootStrap {
                     //.to(new File("D:\\MAC\\CSHonors\\data\\ratings0.csv"));
                     .to( new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\ratingsNewSrc"+i+".csv"));
             builder.addConfiguration(dataConfigTag,ModelDisposition.EXCLUDED);
-        }*/
+        }
         System.out.println("done setting up Tag config")
         engine = builder.build();
         engine.write(new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\Tagmodel.bin"));
