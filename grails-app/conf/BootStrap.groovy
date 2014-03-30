@@ -13,7 +13,8 @@ import myNewTag.MovieRating
 import myNewTag.Tag
 import myNewTag.TagCount
 import myNewTag.TagRating
-import myNewTag.User
+import myNewTag.WebUser
+import myNewTag.WebUser
 import org.grouplens.lenskit.ItemScorer
 import org.grouplens.lenskit.baseline.BaselineScorer
 import org.grouplens.lenskit.baseline.ItemMeanRatingItemScorer
@@ -38,7 +39,7 @@ class BootStrap {
 
         long startTime = System.currentTimeMillis();
 
-        System.out.println("start bootstraping CF Model")
+        /*System.out.println("start bootstraping CF Model")
         String delimiter = ",";
         File inputFile = new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\ratingsNewSrc.csv");
         //File inputFile = new File("D:\\MAC\\CSHonors\\data\\ratings0.csv");
@@ -60,10 +61,10 @@ class BootStrap {
             dataConfig.bind(EventDAO.class).to(base);
             builder.addConfiguration(dataConfig,ModelDisposition.EXCLUDED);
         }
-        /*EventDAO base = new SimpleFileRatingDAO(inputFile, delimiter);
+        *//*EventDAO base = new SimpleFileRatingDAO(inputFile, delimiter);
         LenskitConfiguration dataConfig = new LenskitConfiguration();
         dataConfig.bind(EventDAO.class).to(base);
-        builder.addConfiguration(dataConfig,ModelDisposition.EXCLUDED);*/
+        builder.addConfiguration(dataConfig,ModelDisposition.EXCLUDED);*//*
         System.out.println("done setting up CF config")
         LenskitRecommenderEngine engine = builder.build();
         engine.write(new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\CFmodel.bin"));
@@ -97,11 +98,11 @@ class BootStrap {
         dataConfigTag.set(UserTagRatingFile.class)
                 //.to(new File("D:\\MAC\\CSHonors\\data\\user-tagratings.csv"));
                   .to(new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\userTagRatingsSrc.csv"));
-        /*dataConfigTag.bind(EventDAO.class)
+        *//*dataConfigTag.bind(EventDAO.class)
                 .to(MOOCRatingDAO.class);
         dataConfigTag.set(RatingFile.class)
         //.to(new File("D:\\MAC\\CSHonors\\data\\ratings0.csv"));
-                .to( new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\ratingsNewSrc.csv"));*/
+                .to( new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\ratingsNewSrc.csv"));*//*
         builder = LenskitRecommenderEngine.newBuilder();
         builder.addConfiguration(configTag);
         builder.addConfiguration(dataConfigTag,ModelDisposition.EXCLUDED);
@@ -121,7 +122,7 @@ class BootStrap {
         Long doneTag = System.currentTimeMillis();
         System.out.println("Tag Bootstraping Time (min): "+(doneTag - doneCF)/(1000.0*60));
         System.out.println("done bootstraping Tag Model")
-        System.out.println(" ")
+        System.out.println(" ")*/
 
 
         System.out.println("start bootstraping users.csv");
@@ -131,8 +132,8 @@ class BootStrap {
         def anotherUser
         Double lineCount = 0.0;
         csv.splitEachLine(',') { row ->
-            if(User.findByUserId(row[0])==null){
-                anotherUser = new User(
+            if(WebUser.findByUserId(row[0])==null){
+                anotherUser = new WebUser(
                         userId: row[0],
                         username: row[1],
                         turker: Integer.parseInt(row[2]),
@@ -140,15 +141,15 @@ class BootStrap {
                         finishB: Integer.parseInt(row[4]),
                         rewardCode: row[5]
                 )
-                anotherUser.save(failOnError: true)
+                anotherUser.save(failOnError: true,flush: true)
             }else{
-                def existingUser = User.findByUserId(row[0]);
+                def existingUser = WebUser.findByUserId(row[0]);
                 existingUser.username = row[1];
                 existingUser.turker = Integer.parseInt(row[2]);
                 existingUser.finishA = Integer.parseInt(row[3]);
                 existingUser.finishB = Integer.parseInt(row[4]);
                 existingUser.rewardCode = row[5];
-                existingUser.save(failOnError: true)
+                existingUser.save(failOnError: true,flush: true)
             }
             lineCount+=1;
             if(lineCount%tenpercent == 0){
@@ -156,8 +157,8 @@ class BootStrap {
             }
         }
         Long doneUser = System.currentTimeMillis();
-        System.out.println("users.csv Bootstraping Time (min): "+(doneUser-doneTag)/(1000.0*60));
-        System.out.println("users.csv per line (sec): "+(doneUser-doneTag)/(1000.0*lineCount));
+        System.out.println("users.csv Bootstraping Time (min): "+(doneUser-startTime)/(1000.0*60));
+        System.out.println("users.csv per line (sec): "+(doneUser-startTime)/(1000.0*lineCount));
         System.out.println("line count = "+lineCount);
         System.out.println("done bootstraping users.csv");
         System.out.println(" ");
@@ -177,7 +178,7 @@ class BootStrap {
                     year: row[2],
                     imgurl: row[3],
             )
-            anotherMovie.save(failOnError: true)
+            anotherMovie.save(failOnError: true,flush: true)
             lineCount++;
             if(lineCount%tenpercent == 0){
                 System.out.println(lineCount/tenpercent);
@@ -192,8 +193,34 @@ class BootStrap {
 
 
         System.out.println("start bootstraping movie-tags.csv")
-        //def csv3 = new File("D:\\MAC\\CSHonors\\data\\movie-tags.csv")
-        def csv3 = new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\movieTagNewSrc.csv")
+        //def csv3 = new File("D:\\MAC\\CSHonors\\data\\tag_s.csv")
+        def csv3 = new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\tag_l.csv")
+        lineCount = 0.0;
+        tenpercent = 1504;
+        long tagTime = 0;
+        long tagcountTime = 0;
+        def anotherTag
+        csv3.splitEachLine(',') { row ->
+                anotherTag = new Tag(
+                        tagName: row[0]
+                )
+                anotherTag.save(failOnError: true,flush: true)
+            lineCount++;
+            if(lineCount%tenpercent == 0){
+                System.out.println(lineCount/tenpercent);
+            }
+        }
+        Long doneMovieTag = System.currentTimeMillis();
+        System.out.println("movie-tags.csv Bootstraping Time (min): "+(doneMovieTag-doneMovie)/(1000.0*60));
+        System.out.println("movie-tags.csv per line (sec): "+(doneMovieTag-doneMovie)/(1000.0*lineCount));
+        System.out.println("line count = "+lineCount);
+        System.out.println("done bootstraping movie-tags.csv")
+        System.out.println(" ")
+
+
+        /*System.out.println("start bootstraping movie-tags.csv")
+        def csv3 = new File("D:\\MAC\\CSHonors\\data\\movie-tags.csv")
+        //def csv3 = new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\movieTagNewSrc.csv")
         lineCount = 0.0;
         tenpercent = 8851;
         long tagTime = 0;
@@ -205,7 +232,7 @@ class BootStrap {
                 anotherTag = new Tag(
                         tagName: row[1]
                 )
-                anotherTag.save(failOnError: true)
+                anotherTag.save(failOnError: true,flush: true)
             }else{
                 anotherTag = Tag.findByTagName(row[1])
             }
@@ -221,11 +248,11 @@ class BootStrap {
                         tcMovie: m,
                         tcTag: anotherTag
                 )
-                anotherTagCount.save(failOnError: true)
+                anotherTagCount.save(failOnError: true,flush: true)
             }else{
                 anotherTagCount = TagCount.findByTcMovieAndTcTag(m,anotherTag)
                 anotherTagCount.tagCount++
-                anotherTagCount.save(failOnError: true)
+                anotherTagCount.save(failOnError: true,flush: true)
             }
             long tagcountDone = System.currentTimeMillis();
             tagcountTime += (tagcountDone-tagDone);
@@ -237,10 +264,36 @@ class BootStrap {
         Long doneMovieTag = System.currentTimeMillis();
         System.out.println("movie-tags.csv Bootstraping Time (min): "+(doneMovieTag-doneMovie)/(1000.0*60));
         System.out.println("movie-tags.csv per line (sec): "+(doneMovieTag-doneMovie)/(1000.0*lineCount));
-        System.out.println("tag cost per line (sec): "+(tagTime)/(1000.0*lineCount));
-        System.out.println("tagcount cost per line (sec): "+(tagcountTime)/(1000.0*lineCount));
+        //System.out.println("tag cost per line (sec): "+(tagTime)/(1000.0*lineCount));
+        //System.out.println("tagcount cost per line (sec): "+(tagcountTime)/(1000.0*lineCount));
         System.out.println("line count = "+lineCount);
         System.out.println("done bootstraping movie-tags.csv")
+        System.out.println(" ")*/
+
+
+        System.out.println("start bootstraping tagcount_s.csv")
+        //def csv7 = new File("D:\\MAC\\CSHonors\\data\\tagcount_s.csv")
+        def csv7 = new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\tagcount_l.csv")
+        lineCount = 0.0;
+        tenpercent = 6615;
+        def anotherTagCount
+        csv7.splitEachLine(',') { row ->
+                anotherTagCount = new TagCount(
+                        tagCount: Integer.parseInt(row[2]),
+                        tcMovieId: row[0],
+                        tcTagname: row[1]
+                )
+                anotherTagCount.save(failOnError: true,flush: true)
+            lineCount++;
+            if(lineCount%tenpercent == 0){
+                System.out.println(lineCount/tenpercent);
+            }
+        }
+        Long doneTagcounts = System.currentTimeMillis();
+        System.out.println("tsgcount.csv Bootstraping Time (min): "+(doneTagcounts-doneMovieTag)/(1000.0*60));
+        System.out.println("tsgcount.csv per line (sec): "+(doneTagcounts-doneMovieTag)/(1000.0*lineCount));
+        System.out.println("line count = "+lineCount);
+        System.out.println("done bootstraping tsgcount.csv")
         System.out.println(" ")
 
 
@@ -254,24 +307,24 @@ class BootStrap {
             anotherMovieRating = new MovieRating(
                     movieRating: Double.parseDouble(row[2]),
                     movie: Movie.findByMovieId(row[1]),
-                    user: User.findByUserId(row[0])
+                    user: WebUser.findByUserId(row[0])
             )
-            anotherMovieRating.save(failOnError: true)
+            anotherMovieRating.save(failOnError: true,flush: true)
 
-            User user = User.findByUserId(row[0])
+            WebUser user = WebUser.findByUserId(row[0])
             user.addToMovieRatings(anotherMovieRating)
-            user.save(failOnError: true)
+            user.save(failOnError: true,flush: true)
             Movie movie = Movie.findByMovieId(row[1])
             movie.addToUserMovieRatings(anotherMovieRating)
-            movie.save(failOnError: true)
+            movie.save(failOnError: true,flush: true)
             lineCount++;
             if(lineCount%tenpercent == 0){
                 System.out.println(lineCount/tenpercent);
             }
         }
         Long doneRatings = System.currentTimeMillis();
-        System.out.println("ratings.csv Bootstraping Time (min): "+(doneRatings-doneMovieTag)/(1000.0*60));
-        System.out.println("ratings.csv per line (sec): "+(doneRatings-doneMovieTag)/(1000.0*lineCount));
+        System.out.println("ratings.csv Bootstraping Time (min): "+(doneRatings-doneTagcounts)/(1000.0*60));
+        System.out.println("ratings.csv per line (sec): "+(doneRatings-doneTagcounts)/(1000.0*lineCount));
         System.out.println("line count = "+lineCount);
         System.out.println("done bootstraping newratings0.csv")
         System.out.println(" ")
@@ -286,20 +339,20 @@ class BootStrap {
             anotherUserTagRating = new TagRating(
                     tagRating: Double.parseDouble(row[3]),
                     trMovie: Movie.findByMovieId(row[1]),
-                    trUser: User.findByUserId(row[0]),
+                    trUser: WebUser.findByUserId(row[0]),
                     trTag: Tag.findByTagName(row[2])
             )
-            anotherUserTagRating.save(failOnError: true)
+            anotherUserTagRating.save(failOnError: true,flush: true)
 
             Movie movie =  Movie.findByMovieId(row[1])
             movie.addToUserTagRatings(anotherUserTagRating)
-            movie.save(failOnError: true)
-            User user = User.findByUserId(row[0])
+            movie.save(failOnError: true,flush: true)
+            WebUser user = WebUser.findByUserId(row[0])
             user.addToUserTagRatings(anotherUserTagRating)
-            user.save(failOnError: true)
+            user.save(failOnError: true,flush: true)
             Tag tag = Tag.findByTagName(row[2])
             tag.addToTagRatings(anotherUserTagRating)
-            tag.save(failOnError: true)
+            tag.save(failOnError: true,flush: true)
             lineCount++;
         }
         Long doneTagRatings = System.currentTimeMillis();
@@ -319,7 +372,7 @@ class BootStrap {
             Movie movie = Movie.findByMovieId(row[0])
             movie.avgRating = Double.parseDouble(row[1]);
             movie.previousCount = (Integer) Double.parseDouble(row[2]);
-            movie.save(failOnError: true)
+            movie.save(failOnError: true,flush: true)
             lineCount++;
             if(lineCount%tenpercent == 0){
                 System.out.println(lineCount/tenpercent);

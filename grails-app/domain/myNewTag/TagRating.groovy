@@ -2,7 +2,7 @@ package myNewTag
 
 /**
  * Created with IntelliJ IDEA.
- * User: Jie Shan
+ * WebUser: Jie Shan
  * Date: 13-11-4
  * Time: 上午12:56
  * To change this template use File | Settings | File Templates.
@@ -10,7 +10,7 @@ package myNewTag
 class TagRating {
 
     Double tagRating
-    User trUser
+    WebUser trUser
     Movie trMovie
     Tag trTag
 

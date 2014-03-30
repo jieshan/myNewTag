@@ -2,7 +2,7 @@ package cbf.dao;
 
 /**
  * Created with IntelliJ IDEA.
- * User: Jie Shan
+ * WebUser: Jie Shan
  * Date: 13-10-26
  * Time: 下午3:37
  * To change this template use File | Settings | File Templates.

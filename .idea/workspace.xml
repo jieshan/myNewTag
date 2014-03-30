@@ -5,13 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="944a021f-2b88-455a-8b19-81abe1bb555f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/postgresql-9.3-1101.jdbc41.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/lib1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devDb.h2.db" afterPath="$PROJECT_DIR$/devDb.h2.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/cbf/CBFMainC.java" afterPath="$PROJECT_DIR$/src/java/cbf/CBFMainC.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/cbf/CF.java" afterPath="$PROJECT_DIR$/src/java/cbf/CF.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/cbf/dao/MOOCRatingDAO.java" afterPath="$PROJECT_DIR$/src/java/cbf/dao/MOOCRatingDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/myNewTag/Movie.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/myNewTag/Movie.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/myNewTag/MovieRating.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/myNewTag/MovieRating.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/myNewTag/MyNewTagController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/myNewTag/MyNewTagController.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/cbf/TFIDFItemScorerC.java" afterPath="$PROJECT_DIR$/src/java/cbf/TFIDFItemScorerC.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/myNewTag/Tag.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/myNewTag/Tag.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/myNewTag/TagCount.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/myNewTag/TagCount.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/myNewTag/TagRating.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/myNewTag/TagRating.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/cbf/dao/TagRating.java" afterPath="$PROJECT_DIR$/src/java/cbf/dao/TagRating.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/cbf/ValueComparator.java" afterPath="$PROJECT_DIR$/src/java/cbf/ValueComparator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/myNewTag/_userRecommendationsA.gsp" afterPath="$PROJECT_DIR$/grails-app/views/myNewTag/_userRecommendationsA.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/myNewTag/_userRecommendationsC.gsp" afterPath="$PROJECT_DIR$/grails-app/views/myNewTag/_userRecommendationsC.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devDb.lock.db" afterPath="$PROJECT_DIR$/devDb.lock.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devDb.trace.db" afterPath="$PROJECT_DIR$/devDb.trace.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/myNewTag/moviePage.gsp" afterPath="$PROJECT_DIR$/grails-app/views/myNewTag/moviePage.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/myNewTag/moviePageRated.gsp" afterPath="$PROJECT_DIR$/grails-app/views/myNewTag/moviePageRated.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/myNewTag/moviePageRec.gsp" afterPath="$PROJECT_DIR$/grails-app/views/myNewTag/moviePageRec.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myNewTag-grailsPlugins.iml" afterPath="$PROJECT_DIR$/myNewTag-grailsPlugins.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myNewTag.iml" afterPath="$PROJECT_DIR$/myNewTag.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/myNewTag/userHome.gsp" afterPath="$PROJECT_DIR$/grails-app/views/myNewTag/userHome.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/myNewTag/userRecommendations.gsp" afterPath="$PROJECT_DIR$/grails-app/views/myNewTag/userRecommendations.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\MAC\CSHonors\myNewTag\grails-app\domain\myNewTag\User.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/myNewTag/WebUser.groovy" />
     </list>
     <ignored path="myNewTag.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$USER_HOME$/.grails/" />
     <file path="/MainController.groovy" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1383520296676" ignored="false" />
-    <file path="/fragment.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1392617837342" ignored="false" />
+    <file path="/fragment.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395907291893" ignored="false" />
     <file path="/CBFMain.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1392415958011" ignored="false" />
     <file path="/a.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1382154849541" ignored="false" />
     <file path="/sample.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1382154858297" ignored="false" />
@@ -24,15 +58,15 @@
     <file path="/MovieRating.groovy" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1394830448446" ignored="false" />
     <file path="/Tag.groovy" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1394577141433" ignored="false" />
     <file path="/TagRating.groovy" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1383630684719" ignored="false" />
-    <file path="/Movie.groovy" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1394829957181" ignored="false" />
+    <file path="/Movie.groovy" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1396056585374" ignored="false" />
     <file path="/userLogIn.gsp" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1392528871119" ignored="false" />
-    <file path="/BootStrap.groovy" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1394858637552" ignored="false" />
-    <file path="/MyNewTagController.groovy" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1394913480021" ignored="false" />
+    <file path="/BootStrap.groovy" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1396118624996" ignored="false" />
+    <file path="/MyNewTagController.groovy" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1396146693656" ignored="false" />
     <file path="/userHome.gsp" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1394903125762" ignored="false" />
-    <file path="/moviePage.gsp" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1394903069562" ignored="false" />
+    <file path="/moviePage.gsp" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1396082577714" ignored="false" />
     <file path="$PROJECT_DIR$/../../2012Fall/%COMP346/Project/AmazonWithChat/grails-app/views/amazonWithChat/browseAll.gsp" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1383536986650" ignored="false" />
-    <file path="/TagCount.groovy" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1394576669583" ignored="false" />
-    <file path="/userRecommendations.gsp" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1394558889922" ignored="false" />
+    <file path="/TagCount.groovy" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1396076583378" ignored="false" />
+    <file path="/userRecommendations.gsp" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1396084708432" ignored="false" />
     <file path="/ValueComparator.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1383640653534" ignored="false" />
     <file path="/_movieRatingArea.gsp" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1383710249939" ignored="false" />
     <file path="/_userTagRating.gsp" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1385017799811" ignored="false" />
@@ -46,7 +80,7 @@
     <file path="/Config.groovy" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1387901069717" ignored="false" />
     <file path="/userLogIn.css" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1388469429384" ignored="false" />
     <file path="/userHome.css" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1393875920269" ignored="false" />
-    <file path="/Dummy.txt" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1394939726176" ignored="false" />
+    <file path="/Dummy.txt" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1396212318989" ignored="false" />
     <file path="$PROJECT_DIR$/../../2014Spring/%COMP124P/comp124/hw0/test/edu.macalester.comp124.hw0/AreaTest.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1390676555789" ignored="false" />
     <file path="/AreaTest.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1390676533147" ignored="false" />
     <file path="$PROJECT_DIR$/../../2014Spring/%COMP124P/comp124/hw0/src/edu/macalester/comp124/hw0/Area.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1390676936106" ignored="false" />
@@ -62,11 +96,50 @@
     <file path="/_userRecommendationsA.gsp" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1393834725787" ignored="false" />
     <file path="/_userRecommendationsB.gsp" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1394903263971" ignored="false" />
     <file path="/moviePageRec.gsp" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1394903228984" ignored="false" />
-    <file path="/TFIDFItemScorerC.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1392513993161" ignored="false" />
-    <file path="/CBFMainC.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1394845788246" ignored="false" />
+    <file path="/TFIDFItemScorerC.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1396207645375" ignored="false" />
+    <file path="/CBFMainC.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395901066841" ignored="false" />
     <file path="/moviePageRated.gsp" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1394903241740" ignored="false" />
-    <file path="/CF.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1394923865479" ignored="false" />
-    <file path="$PROJECT_DIR$/target/stacktrace.log" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1394309265167" ignored="false" />
+    <file path="/CF.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1396061116916" ignored="false" />
+    <file path="$PROJECT_DIR$/../recOnly/lenskitTest/src/Main.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1396072173266" ignored="false" />
+    <file path="/Main.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395610800260" ignored="false" />
+    <file path="$PROJECT_DIR$/../recOnly/lenskitTest/src/TagRating.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395595562731" ignored="false" />
+    <file path="$PROJECT_DIR$/../recOnly/lenskitTest/src/MOOCUserDAO.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395595562731" ignored="false" />
+    <file path="$PROJECT_DIR$/../recOnly/lenskitTest/src/TFIDFItemScorerB.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395595565041" ignored="false" />
+    <file path="$PROJECT_DIR$/../recOnly/lenskitTest/src/CF.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395612533025" ignored="false" />
+    <file path="$PROJECT_DIR$/../recOnly/lenskitTest/src/UserNameDAO.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395595562732" ignored="false" />
+    <file path="$PROJECT_DIR$/../recOnly/lenskitTest/src/UserTagRatingDAO.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395595565041" ignored="false" />
+    <file path="$PROJECT_DIR$/../recOnly/lenskitTest/src/CBFMainB.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395595562732" ignored="false" />
+    <file path="$PROJECT_DIR$/../recOnly/lenskitTest/src/TFIDFItemScorerC.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395595565041" ignored="false" />
+    <file path="$PROJECT_DIR$/../recOnly/lenskitTest/src/MOOCItemDAO.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395595562732" ignored="false" />
+    <file path="$PROJECT_DIR$/../recOnly/lenskitTest/src/CSVItemTagDAO.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395595562732" ignored="false" />
+    <file path="$PROJECT_DIR$/../recOnly/lenskitTest/src/RatingFile.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395595562732" ignored="false" />
+    <file path="$PROJECT_DIR$/../recOnly/lenskitTest/src/UserFile.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395595562732" ignored="false" />
+    <file path="$PROJECT_DIR$/../recOnly/lenskitTest/src/TFIDFItemScorer.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395595565041" ignored="false" />
+    <file path="$PROJECT_DIR$/../recOnly/lenskitTest/src/CBFMainC.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395610836530" ignored="false" />
+    <file path="$PROJECT_DIR$/../recOnly/lenskitTest/src/TagFile.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395595562732" ignored="false" />
+    <file path="$PROJECT_DIR$/../recOnly/lenskitTest/src/ItemTitleDAO.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395595562732" ignored="false" />
+    <file path="$PROJECT_DIR$/../recOnly/lenskitTest/src/TFIDFModelBuilder.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395595565041" ignored="false" />
+    <file path="$PROJECT_DIR$/../recOnly/lenskitTest/src/ItemTagDAO.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395595562732" ignored="false" />
+    <file path="$PROJECT_DIR$/../recOnly/lenskitTest/src/PercentageUserTagRatingDAO.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395595565041" ignored="false" />
+    <file path="$PROJECT_DIR$/../recOnly/lenskitTest/src/UserTagRatingFile.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395595565041" ignored="false" />
+    <file path="$PROJECT_DIR$/../recOnly/lenskitTest/src/TFIDFModel.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395595562732" ignored="false" />
+    <file path="$PROJECT_DIR$/../recOnly/lenskitTest/src/MOOCRatingDAO.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395595562732" ignored="false" />
+    <file path="$PROJECT_DIR$/../recOnly/lenskitTest/src/TitleFile.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395595562732" ignored="false" />
+    <file path="$PROJECT_DIR$/../recOnly/lenskitTest/src/ValueComparator.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395595562732" ignored="false" />
+    <file path="$PROJECT_DIR$/../recOnly/lenskitTest/src/CBFMain.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395595565041" ignored="false" />
+    <file path="$PROJECT_DIR$/web-app/WEB-INF/applicationContext.xml" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395903224794" ignored="false" />
+    <file path="$PROJECT_DIR$/target/work/plugins/cache-1.1.1/grails-app/taglib/grails/plugin/cache/CacheTagLib.groovy" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395903225197" ignored="false" />
+    <file path="$PROJECT_DIR$/target/work/plugins/jquery-1.10.2/grails-app/taglib/JQueryResourceTagLib.groovy" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395903225196" ignored="false" />
+    <file path="$PROJECT_DIR$/target/work/plugins/hibernate-3.6.10.1/src/java/hibernate.cfg.xml" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395903225198" ignored="false" />
+    <file path="$PROJECT_DIR$/target/work/plugins/jquery-1.10.2/grails-app/taglib/JQueryTagLib.groovy" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395903225197" ignored="false" />
+    <file path="$PROJECT_DIR$/target/work/plugins/jquery-1.10.2/grails-app/services/JQueryService.groovy" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395903225197" ignored="false" />
+    <file path="$PROJECT_DIR$/target/work/plugins/cache-1.1.1/grails-app/services/grails/plugin/cache/GrailsCacheAdminService.groovy" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395903225197" ignored="false" />
+    <file path="$PROJECT_DIR$/target/work/plugins/resources-1.2/grails-app/taglib/org/grails/plugin/resource/ResourceTagLib.groovy" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395903225196" ignored="false" />
+    <file path="$PROJECT_DIR$/../recOnly/lenskitTest/src/CF2.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1396072039185" ignored="false" />
+    <file path="/CF2.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395910687589" ignored="false" />
+    <file path="$PROJECT_DIR$/../lenskit-master/lenskit-core/src/main/java/org/grouplens/lenskit/data/sql/ResultSetRatingCursor.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395911088775" ignored="false" />
+    <file path="/ResultSetRatingCursor.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1395910941464" ignored="false" />
+    <file path="/MOOCRatingDAO.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1396061516077" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +154,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -117,7 +191,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -130,7 +203,7 @@
       <file leaf-file-name="MyNewTagController.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/myNewTag/MyNewTagController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="813" column="79" selection-start="33253" selection-end="33254" vertical-scroll-proportion="0.0">
+            <state line="470" column="25" selection-start="19315" selection-end="19315" vertical-scroll-proportion="-94.48">
               <folding />
             </state>
           </provider>
@@ -139,19 +212,8 @@
       <file leaf-file-name="CF.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/cbf/CF.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="58" selection-start="5304" selection-end="5304" vertical-scroll-proportion="0.0">
+            <state line="64" column="14" selection-start="2461" selection-end="2461" vertical-scroll-proportion="0.0">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_userRecommendationsB.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/myNewTag/_userRecommendationsB.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="70" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1394903265301" expanded="true" signature="198:220" placeholder="{...}" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -159,73 +221,71 @@
       <file leaf-file-name="CBFMainC.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/cbf/CBFMainC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="68" selection-start="1926" selection-end="1926" vertical-scroll-proportion="0.0">
+            <state line="127" column="14" selection-start="5378" selection-end="5378" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TFIDFItemScorerC.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Movie.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/domain/myNewTag/Movie.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="58" selection-start="730" selection-end="730" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TFIDFItemScorerC.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/java/cbf/TFIDFItemScorerC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="8" selection-start="4505" selection-end="4505" vertical-scroll-proportion="0.0">
+            <state line="123" column="67" selection-start="5200" selection-end="5200" vertical-scroll-proportion="0.9785408">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BuildConfig.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy">
+      <file leaf-file-name="UserTagRatingFile.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/cbf/dao/UserTagRatingFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="25" selection-start="890" selection-end="890" vertical-scroll-proportion="0.0">
+            <state line="18" column="18" selection-start="450" selection-end="450" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BootStrap.groovy" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="UserTagRatingDAO.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/cbf/dao/UserTagRatingDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="61" selection-start="2287" selection-end="2287" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MOOCRatingDAO.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/cbf/dao/MOOCRatingDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="14" selection-start="1220" selection-end="1220" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BootStrap.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="118" selection-start="5445" selection-end="5445" vertical-scroll-proportion="2.0347323">
+            <state line="173" column="33" selection-start="8665" selection-end="8665" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_highest.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/myNewTag/_highest.gsp">
+      <file leaf-file-name="TagCount.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/domain/myNewTag/TagCount.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="102" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1394903331328" expanded="true" signature="238:260" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_alphabet.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/myNewTag/_alphabet.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="76" selection-start="2075" selection-end="2075" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1394903353031" expanded="true" signature="1974:1996" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ratedMovies.gsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/myNewTag/ratedMovies.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="8" selection-start="4886" selection-end="4886" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1394903474065" expanded="true" signature="864:879" placeholder="{...}" />
-                <marker date="1394903474065" expanded="true" signature="1127:1142" placeholder="{...}" />
-                <marker date="1394903474065" expanded="true" signature="1339:1367" placeholder="{...}" />
-                <marker date="1394903474065" expanded="true" signature="1524:1539" placeholder="{...}" />
-                <marker date="1394903474065" expanded="true" signature="1872:1909" placeholder="{...}" />
-                <marker date="1394903474065" expanded="true" signature="5123:5145" placeholder="{...}" />
-              </folding>
+            <state line="25" column="68" selection-start="596" selection-end="596" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -254,22 +314,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/views/myNewTag/moviePageRec.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/domain/myNewTag/WebUser.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/myNewTag/Movie.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/domain/myNewTag/TagCount.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/myNewTag/moviePage.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/myNewTag/moviePageRated.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/myNewTag/_userRecommendationsC.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/myNewTag/_userRecommendationsB.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/myNewTag/moviePageRec.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/myNewTag/userRecommendations.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/myNewTag/_userRecommendationsA.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/myNewTag/_popularity.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/myNewTag/_letterMovie.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/myNewTag/_highest.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/myNewTag/_alphabet.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/myNewTag/ratedMovies.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/myNewTag/MyNewTagController.groovy" />
-        <option value="$PROJECT_DIR$/src/java/cbf/TFIDFItemScorerC.java" />
-        <option value="$PROJECT_DIR$/src/java/cbf/CBFMainC.java" />
+        <option value="$PROJECT_DIR$/grails-app/views/myNewTag/_userRecommendationsC.gsp" />
         <option value="$PROJECT_DIR$/src/java/cbf/CF.java" />
-        <option value="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" />
+        <option value="$PROJECT_DIR$/src/java/cbf/CBFMainC.java" />
+        <option value="$PROJECT_DIR$/src/java/cbf/dao/MOOCRatingDAO.java" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/myNewTag/MyNewTagController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
+        <option value="$PROJECT_DIR$/src/java/cbf/TFIDFItemScorerC.java" />
       </list>
     </option>
   </component>
@@ -332,6 +392,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -547,34 +609,133 @@
               <option name="myItemId" value="grails-app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myNewTag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myNewTag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myNewTag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myNewTag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myNewTag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myNewTag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myNewTag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myNewTag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myNewTag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myNewTag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myNewTag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myNewTag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myNewTag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grails-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="conf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="SDKs" />
-    <property name="OverrideImplement.combined" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.lastSelected" value="File.Encoding" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../recOnly" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -587,21 +748,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Grails.Grails:myNewTag">
-    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$" />
-      <setting name="debug" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
-      <option name="PROGRAM_PARAMETERS" />
-      <method />
-    </configuration>
     <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
       <module name="" />
       <setting name="vmparams" value="" />
@@ -614,12 +760,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -648,19 +822,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -701,7 +862,7 @@
     </configuration>
     <configuration default="false" name="Grails:myNewTag" type="GrailsRunConfigurationType" factoryName="Grails">
       <module name="myNewTag" />
-      <setting name="vmparams" value="" />
+      <setting name="vmparams" value="-Dfile.encoding=GBK" />
       <setting name="cmdLine" value="run-app" />
       <setting name="depsClasspath" value="false" />
       <setting name="passParentEnv" value="true" />
@@ -769,7 +930,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1357" y="-9" width="1618" height="918" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297587" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -791,8 +952,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16193548" sideWeight="0.6702413" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28284183" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21935484" sideWeight="0.69839144" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3016086" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32841823" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -867,115 +1028,135 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/views/myNewTag/_movieRatingArea.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/myNewTag/moviePage.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/myNewTag/_letterMovie.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="73" selection-start="283" selection-end="283" vertical-scroll-proportion="-1.0754716" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/myNewTag/_popularity.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="102" selection-start="368" selection-end="368" vertical-scroll-proportion="-1.4339622" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/myNewTag/_highest.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="102" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0">
+        <state line="469" column="64" selection-start="22943" selection-end="22986" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1394903331328" expanded="true" signature="238:260" placeholder="{...}" />
+            <marker date="1396082440301" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1396082440301" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1396082440301" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1396082440301" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1396082440301" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1396082440301" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1396082440301" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/myNewTag/_alphabet.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/myNewTag/moviePageRated.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="76" selection-start="2075" selection-end="2075" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1394903353031" expanded="true" signature="1974:1996" placeholder="{...}" />
-          </folding>
+        <state line="468" column="46" selection-start="22779" selection-end="22843" vertical-scroll-proportion="-2.2264152">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/myNewTag/ratedMovies.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/myNewTag/moviePageRec.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="8" selection-start="4886" selection-end="4886" vertical-scroll-proportion="0.0">
+        <state line="469" column="0" selection-start="22857" selection-end="22857" vertical-scroll-proportion="0.49479166">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/myNewTag/userRecommendations.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="251" column="71" selection-start="12386" selection-end="12485" vertical-scroll-proportion="-3.9433963">
           <folding>
-            <marker date="1394903474065" expanded="true" signature="864:879" placeholder="{...}" />
-            <marker date="1394903474065" expanded="true" signature="1127:1142" placeholder="{...}" />
-            <marker date="1394903474065" expanded="true" signature="1339:1367" placeholder="{...}" />
-            <marker date="1394903474065" expanded="true" signature="1524:1539" placeholder="{...}" />
-            <marker date="1394903474065" expanded="true" signature="1872:1909" placeholder="{...}" />
-            <marker date="1394903474065" expanded="true" signature="5123:5145" placeholder="{...}" />
+            <marker date="1396084716934" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1396084716934" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1396084716934" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1396084716934" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1396084716934" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1396084716934" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/myNewTag/_userRecommendationsB.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="70" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
           <folding>
-            <marker date="1394903265301" expanded="true" signature="198:220" placeholder="{...}" />
+            <marker date="1394903265301" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/lenskit-api-2.1-SNAPSHOT.jar!/org/grouplens/lenskit/ItemRecommender.class">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/myNewTag/_userRecommendationsC.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="58" selection-start="322" selection-end="322" vertical-scroll-proportion="0.3438914" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../lib/lenskit-core-2.1-SNAPSHOT.jar!/org/grouplens/lenskit/basic/AbstractItemRecommender.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="86" selection-start="1196" selection-end="1196" vertical-scroll-proportion="0.7307692" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/lenskit-core-2.1-SNAPSHOT.jar!/org/grouplens/lenskit/data/dao/SimpleFileRatingDAO.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="177" selection-start="1065" selection-end="1073" vertical-scroll-proportion="0.35067874" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/cbf/TFIDFItemScorerC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="8" selection-start="4505" selection-end="4505" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="12" column="0" selection-start="965" selection-end="965" vertical-scroll-proportion="0.47698745">
+          <folding>
+            <marker date="1396084883292" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/cbf/CBFMainC.java">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/myNewTag/_userRecommendationsA.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="68" selection-start="1926" selection-end="1926" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="11" column="54" selection-start="754" selection-end="965" vertical-scroll-proportion="0.43723848">
+          <folding>
+            <marker date="1396084853275" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/cbf/CF.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="58" selection-start="5304" selection-end="5304" vertical-scroll-proportion="0.0">
+        <state line="64" column="14" selection-start="2461" selection-end="2461" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/myNewTag/MyNewTagController.groovy">
+    <entry file="file://$PROJECT_DIR$/src/java/cbf/ValueComparator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="813" column="79" selection-start="33253" selection-end="33254" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="25" selection-start="890" selection-end="890" vertical-scroll-proportion="0.0">
+        <state line="13" column="13" selection-start="230" selection-end="230" vertical-scroll-proportion="-0.19656488">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="118" selection-start="5445" selection-end="5445" vertical-scroll-proportion="2.0347323">
+        <state line="173" column="33" selection-start="8665" selection-end="8665" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/cbf/dao/UserTagRatingFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="18" selection-start="450" selection-end="450" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/cbf/dao/UserTagRatingDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="61" selection-start="2287" selection-end="2287" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/myNewTag/MyNewTagController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="470" column="25" selection-start="19315" selection-end="19315" vertical-scroll-proportion="-94.48">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/cbf/dao/MOOCRatingDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="14" selection-start="1220" selection-end="1220" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/cbf/CBFMainC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="14" selection-start="5378" selection-end="5378" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/cbf/TFIDFItemScorerC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="123" column="67" selection-start="5200" selection-end="5200" vertical-scroll-proportion="0.9785408">
           <folding />
         </state>
       </provider>
@@ -987,14 +1168,14 @@
         <entry key="myNewTag">
           <value>
             <GrailsSettings>
-              <option name="buildConfigCrc" value="1852756563" />
+              <option name="buildConfigCrc" value="-2046310534" />
               <option name="pluginDependenciesCrc" value="2056435132" />
               <option name="properties">
                 <map>
-                  <entry key="grails.global.plugins.dir" value="C:\Users\Jie Shan\.grails\2.3.0\global-plugins" />
+                  <entry key="grails.global.plugins.dir" value="C:\Users\JieDev\.grails\2.3.0\global-plugins" />
                   <entry key="grails.project.plugins.dir" value="target\work\plugins" />
                   <entry key="grails.project.work.dir" value="target\work" />
-                  <entry key="grails.work.dir" value="C:\Users\Jie Shan\.grails\2.3.0" />
+                  <entry key="grails.work.dir" value="C:\Users\JieDev\.grails\2.3.0" />
                 </map>
               </option>
             </GrailsSettings>
@@ -1084,7 +1265,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>lib</last-edited>
+          <last-edited>lib1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

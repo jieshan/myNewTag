@@ -15,19 +15,23 @@ import org.grouplens.lenskit.cursors.Cursors;
 import org.grouplens.lenskit.data.dao.EventCollectionDAO;
 import org.grouplens.lenskit.data.dao.EventDAO;
 import org.grouplens.lenskit.data.dao.SimpleFileRatingDAO;
+import org.grouplens.lenskit.data.sql.BasicSQLStatementFactory;
+import org.grouplens.lenskit.data.sql.JDBCRatingDAO;
 import org.grouplens.lenskit.knn.item.ItemItemScorer;
 import org.grouplens.lenskit.scored.ScoredId;
 import org.grouplens.lenskit.transform.normalize.BaselineSubtractingUserVectorNormalizer;
 import org.grouplens.lenskit.transform.normalize.UserVectorNormalizer;
 
 import java.io.File;
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
- * User: Jie Shan
+ * WebUser: Jie Shan
  * Date: 14-3-7
  * Time: 下午4:58
  * To change this template use File | Settings | File Templates.
@@ -37,8 +41,8 @@ public class CF{
     public static HashMap<Integer, String> result = new HashMap<Integer, String>();
 
     private String delimiter = ",";
-    //private File inputFile = new File("D:\\MAC\\CSHonors\\data\\newratings0.csv");
-    private File inputFile = new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\ratingsNewUsers.csv");
+    //private File inputFile = new File("D:\\MAC\\CSHonors\\data\\ratings0.csv");
+    private File inputFile = new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\ratingsNewSrc.csv");
     private List<Long> users;
 
     public CF(String[] args) {
@@ -55,14 +59,38 @@ public class CF{
     }
 
     public static void run(File inputFile, String delimiter, List<Long> users) {
-        /*// We first need to configure the data access.
+        EventDAO base = null;
+        try{
+            BasicSQLStatementFactory sfac = new BasicSQLStatementFactory();
+            //sfac.setTableName("offline_rating_s");
+            sfac.setTableName("offline_rating");
+            sfac.setTimestampColumn(null);
+            sfac.setUserColumn("\"user\"");
+            sfac.setItemColumn("item");
+            sfac.setRatingColumn("rating");
+            Class.forName( "org.postgresql.Driver" );
+            Connection conn = DriverManager.getConnection(
+                    "jdbc:postgresql://localhost:5432/postgres",
+                    "postgres",
+                    "ohmyhonor");
+            System.out.println( "connected" );
+            base = new JDBCRatingDAO(conn,sfac);
+        }
+        catch( Exception e ){
+            e.printStackTrace();
+        }
+        if(base == null){
+            base = new SimpleFileRatingDAO(inputFile, delimiter);
+        }
+        // We first need to configure the data access.
         // We will use a simple delimited file; you can use something else like
         // a database (see JDBCRatingDAO).
-        EventDAO base = new SimpleFileRatingDAO(inputFile, delimiter);
+        //EventDAO base = new SimpleFileRatingDAO(inputFile, delimiter);
+
         // Reading directly from CSV files is slow, so we'll cache it in memory.
         // You can use SoftFactory here to allow ratings to be expunged and re-read
         // as memory limits demand. If you're using a database, just use it directly.
-        EventDAO dao = new EventCollectionDAO(Cursors.makeList(base.streamEvents()));
+        EventDAO dao = EventCollectionDAO.create(Cursors.makeList(base.streamEvents()));
 
         // Second step is to create the LensKit configuration...
         LenskitConfiguration config = new LenskitConfiguration();
@@ -90,19 +118,19 @@ public class CF{
 
         // Now that we have a factory, build a recommender from the configuration
         // and data source. This will compute the similarity matrix and return a recommender
-        // that uses it.*/
+        // that uses it.
 
-        EventDAO base = new SimpleFileRatingDAO(inputFile, delimiter);
-        LenskitConfiguration config = new LenskitConfiguration();
-        config.bind(EventDAO.class).to(base);
+//        EventDAO base = new SimpleFileRatingDAO(inputFile, delimiter);
+//        LenskitConfiguration config = new LenskitConfiguration();
+//        config.bind(EventDAO.class).to(base);
 
         Recommender rec = null;
         try {
-            LenskitRecommenderEngine engine = LenskitRecommenderEngine.newLoader()
-                    .addConfiguration(config)
-                    .load(new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\CFmodel.bin"));
-                    //.load(new File("D:\\MAC\\CSHonors\\data\\CFmodel.bin"));
-            rec = engine.createRecommender();
+//            LenskitRecommenderEngine engine = LenskitRecommenderEngine.newLoader()
+//                    .addConfiguration(config)
+//                    .load(new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\CFmodel.bin"));
+//                    //.load(new File("D:\\MAC\\CSHonors\\data\\CFmodel.bin"));
+            rec = LenskitRecommender.build(config);
         } catch (Exception e) {
             throw new RuntimeException("recommender build failed", e);
         }

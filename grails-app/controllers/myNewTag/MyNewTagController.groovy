@@ -1,20 +1,20 @@
 package myNewTag
 
-import cbf.CBFMain
 import cbf.CBFMainB
 import cbf.CBFMainC
 import cbf.CF
-import cbf.ValueComparator
-
+import groovy.sql.Sql
 
 /**
  * Created with IntelliJ IDEA.
- * User: Jie Shan
+ * WebUser: Jie Shan
  * Date: 13-10-15
  * Time: 下午7:23
  * To change this template use File | Settings | File Templates.
  */
 class MyNewTagController {
+
+    def dataSource
 
     def index ={
         redirect(action: 'login')
@@ -35,8 +35,8 @@ class MyNewTagController {
     }
 
     def doLogin={
-        if (User.findWhere(userId:params['userId'],username: params['username'])!=null){
-            def user=User.findWhere(userId: params['userId'],username: params['username'])
+        if (WebUser.findWhere(userId:params['userId'],username: params['username'])!=null){
+            def user=WebUser.findWhere(userId: params['userId'],username: params['username'])
             def movies = Movie.findAll()
             movies = movies.findAll{it.movieName.startsWith("A")}
             render(view:"userHome", model:[u:user, movies:movies])
@@ -49,7 +49,7 @@ class MyNewTagController {
     }
 
     def home ={
-        def user=User.findByUsername(params['u'] as String)
+        def user=WebUser.findByUsername(params['u'] as String)
         def movies = Movie.findAll()
         movies = movies.findAll{it.movieName.startsWith("A")}
         def mode = params['mode']
@@ -63,7 +63,7 @@ class MyNewTagController {
 
     def moviePage={
             System.out.println("movie page")
-            User user = User.findByUsername(params['u'] as String)
+            WebUser user = WebUser.findByUsername(params['u'] as String)
             System.out.println(params['u'] as String)
             Movie movie = Movie.findByMovieId(params['movieId'] as String)
             System.out.println(params['movieId'] as String)
@@ -84,12 +84,17 @@ class MyNewTagController {
             double avg = movie.avgRating;
             double avg2 = Math.round(avg*100)/100.0;
             int count = movie.previousCount+MovieRating.findAllByMovie(movie).size();
-            render(view:"moviePage", model:[mode:mode, count:count, avg2:avg2, user:user, movie:movie, movieRating:movieRating, foundMovieRating:foundMovieRating, tagRatings:tagRatings])
+            ArrayList<TagCount> tcs = TagCount.findAllByTcMovieId(movie.movieId);
+            HashMap<Tag,TagCount> tagging = new HashMap<Tag,TagCount>();
+            for(TagCount tc: tcs){
+                tagging.put(Tag.findByTagName(tc.tcTagname),tc);
+            }
+            render(view:"moviePage", model:[tagging:tagging, mode:mode, count:count, avg2:avg2, user:user, movie:movie, movieRating:movieRating, foundMovieRating:foundMovieRating, tagRatings:tagRatings])
     }
 
     def moviePageRec={
         System.out.println("movie page")
-        User user = User.findByUsername(params['u'] as String)
+        WebUser user = WebUser.findByUsername(params['u'] as String)
         System.out.println(params['u'] as String)
         Movie movie = Movie.findByMovieId(params['movieId'] as String)
         System.out.println(params['movieId'] as String)
@@ -110,12 +115,17 @@ class MyNewTagController {
         double avg = movie.avgRating;
         double avg2 = Math.round(avg*100)/100.0;
         int count = movie.previousCount+MovieRating.findAllByMovie(movie).size();
-        render(view:"moviePageRec", model:[mode:mode, count:count, avg2:avg2, user:user, movie:movie, movieRating:movieRating, foundMovieRating:foundMovieRating, tagRatings:tagRatings])
+        ArrayList<TagCount> tcs = TagCount.findAllByTcMovieId(movie.movieId);
+        HashMap<Tag,TagCount> tagging = new HashMap<Tag,TagCount>();
+        for(TagCount tc: tcs){
+            tagging.put(Tag.findByTagName(tc.tcTagname),tc);
+        }
+        render(view:"moviePageRec", model:[tagging:tagging, mode:mode, count:count, avg2:avg2, user:user, movie:movie, movieRating:movieRating, foundMovieRating:foundMovieRating, tagRatings:tagRatings])
     }
 
     def moviePageRated={
         System.out.println("movie page")
-        User user = User.findByUsername(params['u'] as String)
+        WebUser user = WebUser.findByUsername(params['u'] as String)
         System.out.println(params['u'] as String)
         Movie movie = Movie.findByMovieId(params['movieId'] as String)
         System.out.println(params['movieId'] as String)
@@ -136,11 +146,16 @@ class MyNewTagController {
         double avg = movie.avgRating;
         double avg2 = Math.round(avg*100)/100.0;
         int count = movie.previousCount+MovieRating.findAllByMovie(movie).size();
-        render(view:"moviePageRated", model:[mode:mode, count:count, avg2:avg2, user:user, movie:movie, movieRating:movieRating, foundMovieRating:foundMovieRating, tagRatings:tagRatings])
+        ArrayList<TagCount> tcs = TagCount.findAllByTcMovieId(movie.movieId);
+        HashMap<Tag,TagCount> tagging = new HashMap<Tag,TagCount>();
+        for(TagCount tc: tcs){
+            tagging.put(Tag.findByTagName(tc.tcTagname),tc);
+        }
+        render(view:"moviePageRated", model:[tagging:tagging, mode:mode, count:count, avg2:avg2, user:user, movie:movie, movieRating:movieRating, foundMovieRating:foundMovieRating, tagRatings:tagRatings])
     }
 
     /*def makeRecommendations={
-        User user = User.findByUsername(params['u'] as String)
+        WebUser user = WebUser.findByUsername(params['u'] as String)
         String[] users = new String[1];
         users[0] = user.userId
         def mode = params['mode']
@@ -176,7 +191,7 @@ class MyNewTagController {
     }*/
 
     def makeRecommendations={
-        User user = User.findByUsername(params['u'] as String)
+        WebUser user = WebUser.findByUsername(params['u'] as String)
         String[] users = new String[1];
         users[0] = user.userId
         def mode = params['mode']
@@ -196,6 +211,7 @@ class MyNewTagController {
                 m.save(failOnError: true);
             }
         }*/
+        Long start = System.currentTimeMillis();
         Map sortedRecList;
         if(!user.turker){
             CF rec = new CF(users);
@@ -278,12 +294,18 @@ class MyNewTagController {
                 }
             }
         }
-        render(view:"userRecommendations", model:[user:user, sortedRecList:sortedRecList, mode:mode])
+        HashMap<String,ArrayList<TagCount>> tcs = new HashMap<String,ArrayList<TagCount>>();
+        for(Movie m : sortedRecList.keySet()){
+            tcs.put(m.movieId,TagCount.findAllByTcMovieId(m.movieId));
+        }
+        Long end = System.currentTimeMillis();
+        System.out.println("rec time (sec): "+(end-start)/(1000.0));
+        render(view:"userRecommendations", model:[tcs:tcs, user:user, sortedRecList:sortedRecList, mode:mode])
     }
 
     def makeRecommendationsA={
         def userId = params.userid;
-        User user = User.findByUserId(userId)
+        WebUser user = WebUser.findByUserId(userId)
         String[] users = new String[1];
         users[0] = userId
         def movies = Movie.findAll()
@@ -302,6 +324,7 @@ class MyNewTagController {
                 m.save(failOnError: true);
             }
         }*/
+        Long start = System.currentTimeMillis();
         Map sortedRecList;
         if(!user.turker){
             CF rec = new CF(users);
@@ -384,12 +407,18 @@ class MyNewTagController {
                 }
             }
         }
-        render(template: "userRecommendationsA", model: [user: user, sortedRecList: sortedRecList])
+        HashMap<String,ArrayList<TagCount>> tcs = new HashMap<String,ArrayList<TagCount>>();
+        for(Movie m : sortedRecList.keySet()){
+            tcs.put(m.movieId,TagCount.findAllByTcMovieId(m.movieId));
+        }
+        Long end = System.currentTimeMillis();
+        System.out.println("rec time (sec): "+(end-start)/(1000.0));
+        render(template: "userRecommendationsA", model: [tcs:tcs, user: user, sortedRecList: sortedRecList])
     }
 
     def makeRecommendationsB={
         def userId = params.userid;
-        User user = User.findByUserId(userId)
+        WebUser user = WebUser.findByUserId(userId)
         String[] users = new String[1];
         users[0] = userId
         def movies = Movie.findAll()
@@ -425,7 +454,7 @@ class MyNewTagController {
 
     def makeRecommendationsC={
         def userId = params.userid;
-        User user = User.findByUserId(userId)
+        WebUser user = WebUser.findByUserId(userId)
         String[] users = new String[1];
         users[0] = userId
         def movies = Movie.findAll()
@@ -444,6 +473,7 @@ class MyNewTagController {
                 m.save(failOnError: true);
             }
         }*/
+        Long start = System.currentTimeMillis();
         Map sortedRecList;
         if(!user.turker){
             CBFMainC rec = new CBFMainC(users);
@@ -529,7 +559,13 @@ class MyNewTagController {
                 }
             }
         }
-        render(template:"userRecommendationsC", model:[user:user, sortedRecList:sortedRecList])
+        HashMap<String,ArrayList<TagCount>> tcs = new HashMap<String,ArrayList<TagCount>>();
+        for(Movie m : sortedRecList.keySet()){
+            tcs.put(m.movieId,TagCount.findAllByTcMovieId(m.movieId));
+        }
+        Long end = System.currentTimeMillis();
+        System.out.println("rec time (sec): "+(end-start)/(1000.0));
+        render(template:"userRecommendationsC", model:[tcs:tcs, user:user, sortedRecList:sortedRecList])
     }
 
     def rateMovie = {
@@ -538,15 +574,16 @@ class MyNewTagController {
         def userId = params.userid
         def movieId = params.movieid
 
-        if(MovieRating.findByUserAndMovie(User.findByUserId(userId),  Movie.findByMovieId(movieId))==null){
+        if(MovieRating.findByUserAndMovie(WebUser.findByUserId(userId),  Movie.findByMovieId(movieId))==null){
+
             def movieRating = new MovieRating(
                     movieRating: rating,
                     movie: Movie.findByMovieId(movieId),
-                    user: User.findByUserId(userId)
+                    user: WebUser.findByUserId(userId)
             )
             movieRating.save(failOnError: true)
 
-            User user = User.findByUserId(userId)
+            WebUser user = WebUser.findByUserId(userId)
             user.addToMovieRatings(movieRating)
             user.save(failOnError: true)
             Movie movie = Movie.findByMovieId(movieId)
@@ -557,6 +594,13 @@ class MyNewTagController {
             pw.append(userId+","+movieId+","+rating+"\n");
             pw.flush();
             pw.close();
+
+            def sql = Sql.newInstance(dataSource);
+            def exist = sql.execute("insert into offline_rating (item,rating,\"user\") values (?,?,?)",
+                    [Long.parseLong(movieId),Double.parseDouble(rating),Long.parseLong(userId)]);
+            //def exist = sql.execute("insert into offline_rating_s (item,rating,\"user\") values (?,?,?)",
+            //       [Long.parseLong(movieId),Double.parseDouble(rating),Long.parseLong(userId)]);
+
         }else{
             try {
                 String lineToRemove = userId+","+movieId;
@@ -604,9 +648,16 @@ class MyNewTagController {
             catch (IOException ex) {
                 ex.printStackTrace();
             }
-            def updatedMovieRating = MovieRating.findByUserAndMovie(User.findByUserId(userId),  Movie.findByMovieId(movieId));
+            def updatedMovieRating = MovieRating.findByUserAndMovie(WebUser.findByUserId(userId),  Movie.findByMovieId(movieId));
             updatedMovieRating.movieRating = Double.parseDouble(rating);
             updatedMovieRating.save(failOnError: true);
+
+            def r = Double.parseDouble(rating);
+            def longm = Long.parseLong(movieId);
+            def longu = Long.parseLong(userId);
+            def sql = Sql.newInstance(dataSource);
+            def exist = sql.execute("update offline_rating set rating=$r where item=$longm and \"user\"=$longu");
+            //def exist = sql.execute("update offline_rating_s set rating=$r where item=$longm and \"user\"=$longu");
         }
         render(template:'movieRatingArea',model: [rating:rating])
     }
@@ -616,7 +667,7 @@ class MyNewTagController {
         //System.out.println("rating: " + rating)
         def tag = Tag.findById(tagId);
         def userId = params.userid
-        def user = User.findByUserId(userId);
+        def user = WebUser.findByUserId(userId);
         def movieId = params.movieid
         def movie = Movie.findByMovieId(movieId)
         def s = "";
@@ -703,7 +754,7 @@ class MyNewTagController {
         //System.out.println("rating: " + rating)
         def tag = Tag.findById(tagId);
         def userId = params.userid
-        def user = User.findByUserId(userId);
+        def user = WebUser.findByUserId(userId);
         def movieId = params.movieid
         def movie = Movie.findByMovieId(movieId)
         def s = "";
@@ -788,7 +839,7 @@ class MyNewTagController {
 
     def popularity={
         def userId = params.userid;
-        def user = User.findByUserId(userId);
+        def user = WebUser.findByUserId(userId);
         def movies = Movie.findAll()
         /*for(Movie m in movies){
             if(m.userMovieRatings.size() == 0){
@@ -817,7 +868,7 @@ class MyNewTagController {
 
     def highest={
         def userId = params.userid;
-        def user = User.findByUserId(userId);
+        def user = WebUser.findByUserId(userId);
         def movies = Movie.findAll()
         /*for(Movie m in movies){
             if(m.userMovieRatings.size() == 0){
@@ -846,7 +897,7 @@ class MyNewTagController {
 
     def alphabet={
         def userId = params.userid;
-        def user = User.findByUserId(userId);
+        def user = WebUser.findByUserId(userId);
         def movies = Movie.findAll()
         movies = movies.findAll{it.movieName.startsWith("A")}
         render(template:'alphabet', model:[movies: movies, u:user])
@@ -854,7 +905,7 @@ class MyNewTagController {
 
     def collectFeedback={
         def userId = params.userid;
-        def user = User.findByUserId(userId);
+        def user = WebUser.findByUserId(userId);
         //FileWriter pw = new FileWriter("D:\\MAC\\CSHonors\\data\\feedback.csv", true);
         FileWriter pw = new FileWriter("D:\\MAC\\CSHonors\\data\\ml-10M100K\\feedback.csv", true);
         String[] surveyAns = new String[6];
@@ -908,7 +959,7 @@ class MyNewTagController {
 
     def letterMovie={
         def userId = params.userid;
-        def user = User.findByUserId(userId);
+        def user = WebUser.findByUserId(userId);
         def letter = params.lid;
         def movies = Movie.findAll()
         if(!letter.equals("0")){
@@ -920,7 +971,7 @@ class MyNewTagController {
     }
 
     def ratedMovies={
-        User user = User.findByUsername(params['u'] as String)
+        WebUser user = WebUser.findByUsername(params['u'] as String)
         System.out.println(params['u'] as String)
         def movies = Movie.findAll()
         /*for(Movie m in movies){

@@ -122,7 +122,9 @@ public class TFIDFItemScorerC extends AbstractItemScorer {
             	long tid = model.tagIds.get(tagr.getTid());
                 double tr = tagr.getRating();
                 for(double i=1; i<=tr; i++){
+                    System.out.println("tid "+profile.get(tid));
                     profile.set(tid, profile.get(tid)*(1+1/i));
+                    System.out.println("tid "+profile.get(tid));
                 }
             }
         }

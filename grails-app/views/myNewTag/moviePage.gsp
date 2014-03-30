@@ -467,8 +467,8 @@
             <canvas width="900" height="600" id="myCanvas">
                 <p>Anything in here will be replaced on browsers that support the canvas element</p>
                 <ul>
-                    <g:each in="${movie.tagCounts}" var="tagCount">
-                        <li><a id="${"cloud"+tagCount.tcTag.id}" class="cloudtag" style="color: black" onclick="return tpu(this)" data-weight="${tagCount.tagCount+10}">${tagCount.tcTag.tagName}</a></li>
+                    <g:each in="${tagging.keySet()}" var="tag">
+                        <li><a id="${"cloud"+tag.id}" class="cloudtag" style="color: black" onclick="return tpu(this)" data-weight="${tagging.get(tag).tagCount+10}">${tag.tagName}</a></li>
                     </g:each>
                 </ul>
             </canvas>

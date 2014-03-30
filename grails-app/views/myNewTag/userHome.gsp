@@ -316,7 +316,7 @@
 <br>
 
 
-%{--User: ${u.userId}
+%{--WebUser: ${u.userId}
 <g:form action="makeRecommendations" params="[userId:u.userId]" method="post">
     <div class="buttons">
         <span class="formButton">
