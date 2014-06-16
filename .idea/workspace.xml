@@ -5,19 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="944a021f-2b88-455a-8b19-81abe1bb555f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/images/profiler.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/cbf/Test.java" />
-      <change type="DELETED" beforePath="D:\MAC\CSHonors\myNewTag\lib\logback-classic-1.0.13.jar" afterPath="" />
-      <change type="DELETED" beforePath="D:\MAC\CSHonors\myNewTag\lib\slf4j-api-1.7.5.jar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/cbf/CBFMainC.java" afterPath="$PROJECT_DIR$/src/java/cbf/CBFMainC.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/cbf/CF.java" afterPath="$PROJECT_DIR$/src/java/cbf/CF.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/myNewTag/MyNewTagController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/myNewTag/MyNewTagController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/cbf/TFIDFItemScorerC.java" afterPath="$PROJECT_DIR$/src/java/cbf/TFIDFItemScorerC.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myNewTag-grailsPlugins.iml" afterPath="$PROJECT_DIR$/myNewTag-grailsPlugins.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myNewTag.iml" afterPath="$PROJECT_DIR$/myNewTag.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="myNewTag.iws" />
@@ -59,7 +46,7 @@
     <file path="/Config.groovy" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1387901069717" ignored="false" />
     <file path="/userLogIn.css" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1388469429384" ignored="false" />
     <file path="/userHome.css" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1393875920269" ignored="false" />
-    <file path="/Dummy.txt" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1402953569634" ignored="false" />
+    <file path="/Dummy.txt" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1402953721969" ignored="false" />
     <file path="$PROJECT_DIR$/../../2014Spring/%COMP124P/comp124/hw0/test/edu.macalester.comp124.hw0/AreaTest.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1390676555789" ignored="false" />
     <file path="/AreaTest.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1390676533147" ignored="false" />
     <file path="$PROJECT_DIR$/../../2014Spring/%COMP124P/comp124/hw0/src/edu/macalester/comp124/hw0/Area.java" changelist="944a021f-2b88-455a-8b19-81abe1bb555f" time="1390676936106" ignored="false" />
@@ -999,7 +986,11 @@
       <created>1396212654388</created>
       <updated>1396212654388</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Test Git + Profiler pic">
+      <created>1402953974718</created>
+      <updated>1402953974718</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
