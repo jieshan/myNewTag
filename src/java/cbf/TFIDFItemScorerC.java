@@ -106,8 +106,8 @@ public class TFIDFItemScorerC extends AbstractItemScorer {
             }   
         }
         
-        //File f = new File("D:\\MAC\\CSHonors\\data\\user-tagratings.csv");
-        File f = new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\userTagRatingsSrc.csv");
+        File f = new File("D:\\MAC\\CSHonors\\data\\user-tagratings.csv");
+        //File f = new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\userTagRatingsSrc.csv");
         PercentageUserTagRatingDAO tagdao = new PercentageUserTagRatingDAO(f);
         // My own customization
         ArrayList<TagRating> exppre = tagdao.getUserTagRatings(user);

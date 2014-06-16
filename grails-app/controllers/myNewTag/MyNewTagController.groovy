@@ -589,8 +589,8 @@ class MyNewTagController {
             Movie movie = Movie.findByMovieId(movieId)
             movie.addToUserMovieRatings(movieRating)
             movie.save(failOnError: true)
-            //FileWriter pw = new FileWriter("D:\\MAC\\CSHonors\\data\\newratings0.csv", true);
-            FileWriter pw = new FileWriter("D:\\MAC\\CSHonors\\data\\ml-10M100K\\ratingsNewUsers.csv", true);
+            FileWriter pw = new FileWriter("D:\\MAC\\CSHonors\\data\\newratings0.csv", true);
+            //FileWriter pw = new FileWriter("D:\\MAC\\CSHonors\\data\\ml-10M100K\\ratingsNewUsers.csv", true);
             pw.append(userId+","+movieId+","+rating+"\n");
             pw.flush();
             pw.close();
@@ -604,8 +604,8 @@ class MyNewTagController {
         }else{
             try {
                 String lineToRemove = userId+","+movieId;
-                //File inFile = new File("D:\\MAC\\CSHonors\\data\\newratings0.csv");
-                File inFile = new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\ratingsNewUsers.csv");
+                File inFile = new File("D:\\MAC\\CSHonors\\data\\newratings0.csv");
+                //File inFile = new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\ratingsNewUsers.csv");
                 if (!inFile.isFile()) {
                     System.out.println("Parameter is not an existing file");
                     return;
@@ -687,8 +687,8 @@ class MyNewTagController {
             movie.save(failOnError: true);
             tag.addToTagRatings(tagRating);
             tag.save(failOnError: true);
-            //FileWriter pw = new FileWriter("D:\\MAC\\CSHonors\\data\\user-tagratings.csv", true);
-            FileWriter pw = new FileWriter("D:\\MAC\\CSHonors\\data\\ml-10M100K\\userTagRatingsSrc.csv", true);
+            FileWriter pw = new FileWriter("D:\\MAC\\CSHonors\\data\\user-tagratings.csv", true);
+            //FileWriter pw = new FileWriter("D:\\MAC\\CSHonors\\data\\ml-10M100K\\userTagRatingsSrc.csv", true);
             pw.append(userId+","+movieId+","+tag.tagName+",1\n");
             pw.flush();
             pw.close();
@@ -697,8 +697,8 @@ class MyNewTagController {
             // rating was -1
             try {
                 String lineToRemove = userId+","+movieId+","+tag.tagName;
-                //File inFile = new File("D:\\MAC\\CSHonors\\data\\user-tagratings.csv");
-                File inFile = new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\userTagRatingsSrc.csv");
+                File inFile = new File("D:\\MAC\\CSHonors\\data\\user-tagratings.csv");
+                //File inFile = new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\userTagRatingsSrc.csv");
                 if (!inFile.isFile()) {
                     System.out.println("Parameter is not an existing file");
                     return;
@@ -774,8 +774,8 @@ class MyNewTagController {
             movie.save(failOnError: true);
             tag.addToTagRatings(tagRating);
             tag.save(failOnError: true);
-            //FileWriter pw = new FileWriter("D:\\MAC\\CSHonors\\data\\user-tagratings.csv", true);
-            FileWriter pw = new FileWriter("D:\\MAC\\CSHonors\\data\\ml-10M100K\\userTagRatingsSrc.csv", true);
+            FileWriter pw = new FileWriter("D:\\MAC\\CSHonors\\data\\user-tagratings.csv", true);
+            //FileWriter pw = new FileWriter("D:\\MAC\\CSHonors\\data\\ml-10M100K\\userTagRatingsSrc.csv", true);
             pw.append(userId+","+movieId+","+tag.tagName+",-1\n");
             pw.flush();
             pw.close();
@@ -785,8 +785,8 @@ class MyNewTagController {
             try {
                 String lineToRemove = userId+","+movieId+","+tag.tagName;
                 System.out.println(lineToRemove);
-                //File inFile = new File("D:\\MAC\\CSHonors\\data\\user-tagratings.csv");
-                File inFile = new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\userTagRatingsSrc.csv");
+                File inFile = new File("D:\\MAC\\CSHonors\\data\\user-tagratings.csv");
+                //File inFile = new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\userTagRatingsSrc.csv");
                 if (!inFile.isFile()) {
                     System.out.println("Parameter is not an existing file");
                     return;
@@ -906,8 +906,8 @@ class MyNewTagController {
     def collectFeedback={
         def userId = params.userid;
         def user = WebUser.findByUserId(userId);
-        //FileWriter pw = new FileWriter("D:\\MAC\\CSHonors\\data\\feedback.csv", true);
-        FileWriter pw = new FileWriter("D:\\MAC\\CSHonors\\data\\ml-10M100K\\feedback.csv", true);
+        FileWriter pw = new FileWriter("D:\\MAC\\CSHonors\\data\\feedback.csv", true);
+        //FileWriter pw = new FileWriter("D:\\MAC\\CSHonors\\data\\ml-10M100K\\feedback.csv", true);
         String[] surveyAns = new String[6];
         surveyAns[0] = params.ans1 as String
         surveyAns[1] = params.ans2 as String
@@ -948,8 +948,8 @@ class MyNewTagController {
             user.finishB = 1;
             user.save(failOnError: true);
         }
-        //pw = new FileWriter("D:\\MAC\\CSHonors\\data\\users.csv", true);
-        pw = new FileWriter("D:\\MAC\\CSHonors\\data\\ml-10M100K\\usersSrc.csv", true);
+        pw = new FileWriter("D:\\MAC\\CSHonors\\data\\users.csv", true);
+        //pw = new FileWriter("D:\\MAC\\CSHonors\\data\\ml-10M100K\\usersSrc.csv", true);
         def line = userId+","+user.username+","+user.turker+","+user.finishA+","+user.finishB+","+user.rewardCode+"\n";
         pw.append(line);
         pw.flush();

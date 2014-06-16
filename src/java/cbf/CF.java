@@ -41,8 +41,8 @@ public class CF{
     public static HashMap<Integer, String> result = new HashMap<Integer, String>();
 
     private String delimiter = ",";
-    //private File inputFile = new File("D:\\MAC\\CSHonors\\data\\ratings0.csv");
-    private File inputFile = new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\ratingsNewSrc.csv");
+    private File inputFile = new File("D:\\MAC\\CSHonors\\data\\ratings0.csv");
+    //private File inputFile = new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\ratingsNewSrc.csv");
     private List<Long> users;
 
     public CF(String[] args) {
@@ -62,8 +62,8 @@ public class CF{
         EventDAO base = null;
         try{
             BasicSQLStatementFactory sfac = new BasicSQLStatementFactory();
-            //sfac.setTableName("offline_rating_s");
-            sfac.setTableName("offline_rating");
+            sfac.setTableName("offline_rating_s");
+            //sfac.setTableName("offline_rating");
             sfac.setTimestampColumn(null);
             sfac.setUserColumn("\"user\"");
             sfac.setItemColumn("item");

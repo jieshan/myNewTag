@@ -126,8 +126,8 @@ class BootStrap {
 
 
         System.out.println("start bootstraping users.csv");
-        //def csv = new File("D:\\MAC\\CSHonors\\data\\users.csv")
-        def csv = new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\usersSrc.csv")
+        def csv = new File("D:\\MAC\\CSHonors\\data\\users.csv")
+        //def csv = new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\usersSrc.csv")
         long tenpercent = 765;
         def anotherUser
         Double lineCount = 0.0;
@@ -165,13 +165,13 @@ class BootStrap {
 
 
         System.out.println("start bootstraping movie-titles.csv");
-        def csv2 = new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\moviesNewSrc.csv")
-        //def csv2 = new File("D:\\MAC\\CSHonors\\data\\movie-titles.csv")
+        //def csv2 = new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\moviesNewSrc.csv")
+        def csv2 = new File("D:\\MAC\\CSHonors\\data\\movie-titles.csv")
         lineCount = 0.0;
         tenpercent = 1015;
         def anotherMovie
-        //csv2.splitEachLine(",") { row ->
-        csv2.splitEachLine(",\"|\",") { row ->
+        csv2.splitEachLine(",") { row ->
+        //csv2.splitEachLine(",\"|\",") { row ->
             anotherMovie = new Movie(
                     movieId: row[0],
                     movieName: row[1],
@@ -193,8 +193,8 @@ class BootStrap {
 
 
         System.out.println("start bootstraping movie-tags.csv")
-        //def csv3 = new File("D:\\MAC\\CSHonors\\data\\tag_s.csv")
-        def csv3 = new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\tag_l.csv")
+        def csv3 = new File("D:\\MAC\\CSHonors\\data\\tag_s.csv")
+        //def csv3 = new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\tag_l.csv")
         lineCount = 0.0;
         tenpercent = 1504;
         long tagTime = 0;
@@ -272,8 +272,8 @@ class BootStrap {
 
 
         System.out.println("start bootstraping tagcount_s.csv")
-        //def csv7 = new File("D:\\MAC\\CSHonors\\data\\tagcount_s.csv")
-        def csv7 = new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\tagcount_l.csv")
+        def csv7 = new File("D:\\MAC\\CSHonors\\data\\tagcount_s.csv")
+        //def csv7 = new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\tagcount_l.csv")
         lineCount = 0.0;
         tenpercent = 6615;
         def anotherTagCount
@@ -298,8 +298,8 @@ class BootStrap {
 
 
         System.out.println("start bootstraping newratings0.csv")
-        //def csv4 = new File("D:\\MAC\\CSHonors\\data\\newratings0.csv")
-        def csv4 = new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\ratingsNewUsers.csv")
+        def csv4 = new File("D:\\MAC\\CSHonors\\data\\newratings0.csv")
+        //def csv4 = new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\ratingsNewUsers.csv")
         lineCount = 0.0;
         tenpercent = 924461;
         def anotherMovieRating
@@ -331,8 +331,8 @@ class BootStrap {
 
 
         System.out.println("start bootstraping user-tagratings.csv")
-        //def csv5 = new File("D:\\MAC\\CSHonors\\data\\user-tagratings.csv")
-        def csv5 = new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\userTagRatingsSrc.csv")
+        def csv5 = new File("D:\\MAC\\CSHonors\\data\\user-tagratings.csv")
+        //def csv5 = new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\userTagRatingsSrc.csv")
         lineCount = 0.0;
         def anotherUserTagRating
         csv5.splitEachLine(',') { row ->
@@ -364,8 +364,8 @@ class BootStrap {
 
 
         System.out.println("start bootstraping avgmov.csv")
-        //def csv6 = new File("D:\\MAC\\CSHonors\\data\\avgmov.csv")
-        def csv6 = new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\avgmovSrc.csv")
+        def csv6 = new File("D:\\MAC\\CSHonors\\data\\avgmov.csv")
+        //def csv6 = new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\avgmovSrc.csv")
         lineCount = 0.0;
         tenpercent = 1015;
         csv6.splitEachLine(',') { row ->

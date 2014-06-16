@@ -98,8 +98,8 @@ public class CBFMainC {
         config.bind(EventDAO.class)
               .to(MOOCRatingDAO.class);
         config.set(RatingFile.class)
-              //.to(new File("D:\\MAC\\CSHonors\\data\\ratings0.csv"));
-              .to(new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\ratingsNewSrc.csv"));
+              .to(new File("D:\\MAC\\CSHonors\\data\\ratings0.csv"));
+              //.to(new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\ratingsNewSrc.csv"));
 
         // use custom item and user DAOs
         // specify item DAO implementation with tags
@@ -107,25 +107,25 @@ public class CBFMainC {
               .to(CSVItemTagDAO.class);
         // specify tag file
         config.set(TagFile.class)
-              //.to(new File("D:\\MAC\\CSHonors\\data\\movie-tags.csv"));
-              .to(new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\movieTagNewSrc.csv"));
+              .to(new File("D:\\MAC\\CSHonors\\data\\movie-tags.csv"));
+              //.to(new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\movieTagNewSrc.csv"));
         // and title file
         config.set(TitleFile.class)
-              //.to(new File("D:\\MAC\\CSHonors\\data\\movie-titles.csv"));
-              .to(new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\moviesNewSrc.csv"));
+              .to(new File("D:\\MAC\\CSHonors\\data\\movie-titles.csv"));
+              //.to(new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\moviesNewSrc.csv"));
 
         // our user DAO can look up by user name
         config.bind(UserDAO.class)
               .to(MOOCUserDAO.class);
         config.set(UserFile.class)
-              //.to(new File("D:\\MAC\\CSHonors\\data\\users.csv"));
-              .to(new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\usersSrc.csv"));
+              .to(new File("D:\\MAC\\CSHonors\\data\\users.csv"));
+              //.to(new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\usersSrc.csv"));
         
         config.bind(ItemEventDAO.class)
         	  .to(PercentageUserTagRatingDAO.class);
         config.set(UserTagRatingFile.class)
-              //.to(new File("D:\\MAC\\CSHonors\\data\\user-tagratings.csv"));
-              .to(new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\userTagRatingsSrc.csv"));
+              .to(new File("D:\\MAC\\CSHonors\\data\\user-tagratings.csv"));
+              //.to(new File("D:\\MAC\\CSHonors\\data\\ml-10M100K\\userTagRatingsSrc.csv"));
 
         // use the TF-IDF scorer you will implement to score items
         config.bind(ItemScorer.class)

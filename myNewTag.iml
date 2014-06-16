@@ -81,7 +81,6 @@
           <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/jul-to-slf4j/1.7.5/jul-to-slf4j-1.7.5.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/apache/ant/ant-launcher/1.8.4/ant-launcher-1.8.4.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/apache/ant/ant/1.8.4/ant-1.8.4.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-ehcache/3.6.10.Final/hibernate-ehcache-3.6.10.Final.jar!/" />
@@ -100,7 +99,51 @@
     </orderEntry>
     <orderEntry type="module" module-name="myNewTag-grailsPlugins" />
     <orderEntry type="library" name="lib" level="project" />
-    <orderEntry type="library" exported="" name="lib1" level="project" />
+    <orderEntry type="library" name="lib1" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../slf4j-1.7.6/slf4j-simple-1.7.6.jar!/" />
+          <root url="file://$MODULE_DIR$/../slf4j-1.7.6" />
+        </CLASSES>
+        <JAVADOC>
+          <root url="file://$MODULE_DIR$/../slf4j-1.7.6/site/apidocs" />
+          <root url="file://$MODULE_DIR$/../slf4j-1.7.6/site/testapidocs" />
+        </JAVADOC>
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../slf4j-1.7.6/slf4j-api-1.7.6-sources.jar!/" />
+          <root url="file://$MODULE_DIR$/../slf4j-1.7.6/slf4j-api/src/main/java" />
+          <root url="file://$MODULE_DIR$/../slf4j-1.7.6/slf4j-api/src/test/java" />
+          <root url="file://$MODULE_DIR$/../slf4j-1.7.6/slf4j-ext/src/main/java" />
+          <root url="file://$MODULE_DIR$/../slf4j-1.7.6/slf4j-ext/src/test/java" />
+          <root url="file://$MODULE_DIR$/../slf4j-1.7.6/slf4j-jcl/src/main/java" />
+          <root url="file://$MODULE_DIR$/../slf4j-1.7.6/slf4j-jcl/src/test/java" />
+          <root url="file://$MODULE_DIR$/../slf4j-1.7.6/slf4j-nop/src/main/java" />
+          <root url="file://$MODULE_DIR$/../slf4j-1.7.6/slf4j-nop/src/test/java" />
+          <root url="file://$MODULE_DIR$/../slf4j-1.7.6/integration/src/test/java" />
+          <root url="file://$MODULE_DIR$/../slf4j-1.7.6/slf4j-jdk14/src/main/java" />
+          <root url="file://$MODULE_DIR$/../slf4j-1.7.6/slf4j-jdk14/src/test/java" />
+          <root url="file://$MODULE_DIR$/../slf4j-1.7.6/jul-to-slf4j/src/main/java" />
+          <root url="file://$MODULE_DIR$/../slf4j-1.7.6/jul-to-slf4j/src/test/java" />
+          <root url="file://$MODULE_DIR$/../slf4j-1.7.6/slf4j-simple/src/main/java" />
+          <root url="file://$MODULE_DIR$/../slf4j-1.7.6/slf4j-simple/src/test/java" />
+          <root url="file://$MODULE_DIR$/../slf4j-1.7.6/slf4j-android/src/main/java" />
+          <root url="file://$MODULE_DIR$/../slf4j-1.7.6/slf4j-android/src/test/java" />
+          <root url="file://$MODULE_DIR$/../slf4j-1.7.6/slf4j-log4j12/src/main/java" />
+          <root url="file://$MODULE_DIR$/../slf4j-1.7.6/slf4j-log4j12/src/test/java" />
+          <root url="file://$MODULE_DIR$/../slf4j-1.7.6/jcl-over-slf4j/src/main/java" />
+          <root url="file://$MODULE_DIR$/../slf4j-1.7.6/jcl-over-slf4j/src/test/java" />
+          <root url="file://$MODULE_DIR$/../slf4j-1.7.6/slf4j-migrator/src/main/java" />
+          <root url="file://$MODULE_DIR$/../slf4j-1.7.6/slf4j-migrator/src/test/java" />
+          <root url="file://$MODULE_DIR$/../slf4j-1.7.6/osgi-over-slf4j/src/main/java" />
+          <root url="file://$MODULE_DIR$/../slf4j-1.7.6/log4j-over-slf4j/src/main/java" />
+          <root url="file://$MODULE_DIR$/../slf4j-1.7.6/log4j-over-slf4j/src/test/java" />
+          <root url="file://$MODULE_DIR$/../slf4j-1.7.6" />
+        </SOURCES>
+        <jarDirectory url="file://$MODULE_DIR$/../slf4j-1.7.6" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/../slf4j-1.7.6" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
   </component>
 </module>
 
